@@ -14,7 +14,9 @@
 	</script>
 	<script>
 		sap.ui.getCore().attachInit(function () {
-            alert("SAPUI5 is ready");
+            var oImage = new sap.m.Image({
+            	src: "http://www.worldevangelism.net/wp-content/uploads/2014/11/GEO_Globe.jpg"
+            }).placeAt("content");
         });
 	</script>
 </head>
