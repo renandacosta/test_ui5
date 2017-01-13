@@ -10,16 +10,20 @@
 		data-sap-ui-theme="sap_bluecrystal"
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-compatVersion="edge"
-		data-sap-ui-preload="async">
+		data-sap-ui-preload="async"
+		data-sap-ui-resourceroots='{
+			 "opensap.myapp" : "./"
+		}'>
 	</script>
 	<script>
 		sap.ui.getCore().attachInit(function () {
-            var oImage = new sap.m.Image({
-            	src: "http://www.worldevangelism.net/wp-content/uploads/2014/11/GEO_Globe.jpg"
+            sap.ui.xmlview({
+            	viewName : "opensap.myapp.view.App"
             }).placeAt("content");
         });
 	</script>
 </head>
 <body class="sapUiBody" id="content">
 </body>
+
 </html>
